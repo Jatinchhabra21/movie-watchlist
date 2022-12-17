@@ -1,0 +1,7 @@
+{
+    "extends": "eslint-config-airbnb",
+    "env": {
+        "es6": true
+    },
+    "ecmaParser": 6
+}
