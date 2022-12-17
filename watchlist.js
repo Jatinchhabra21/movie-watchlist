@@ -1,14 +1,13 @@
 import { key } from './apikey.js';
 import { getMediaFromId } from './index.js';
 
-const baseUrlId = `http://www.omdbapi.com/?apikey=${key}&i=`;
+const baseUrlId = `https://unique-kringle-436728.netlify.app/api/?apikey=${key}&i=`;
 const mainContainer = document.getElementById('main-container');
 let watchlistArr = [];
 let detailedWatchlist = [];
 
 function loadWatchlist() {
   mainContainer.innerHTML = '';
-  console.log(localStorage.getItem('watchlist'));
   watchlistArr = JSON.parse(localStorage.getItem('watchlist'));
   watchlistArr.forEach(async (imdbId) => {
     const media = await getMediaFromId(baseUrlId + imdbId);
