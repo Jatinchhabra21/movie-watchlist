@@ -1,8 +1,8 @@
 import { key } from '/apikey.js';
 
 const searchBox = document.getElementById('search-box');
-const baseUrlSearch = `http://www.omdbapi.com/?apikey=${key}&s=`;
-const baseUrlId = `http://www.omdbapi.com/?apikey=${key}&i=`;
+const baseUrlSearch = `https://unique-kringle-436728.netlify.app/api/?apikey=${key}&s=`;
+const baseUrlId = `https://unique-kringle-436728.netlify.app/api/?apikey=${key}&i=`;
 const mainContainer = document.getElementById('main-container');
 let searchResultHtml = '';
 let watchlistArr = [];
