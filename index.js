@@ -35,9 +35,9 @@ function handleClickEvent(event) {
 async function searchMedia() {
   if (searchBox.value) {
     const data = await getMediaFromSearch(baseUrlSearch + searchBox.value);
-    !data.Error ? decorateSearchResult(data.Search) : noMovieFound(data.Error);
+    !data.Error ? decorateSearchResult(data.Search) : noMovieFound();
   } else {
-    mainContainer.innerHTML += `<p style="color: red">Please enter a valid search query</p>`;
+    mainContainer.innerHTML = `<p class="no-media-msg">Please enter a valid search query</p>`;
   }
 }
 
@@ -51,8 +51,8 @@ function getMediaFromId(queryUrl) {
   return data;
 }
 
-function noMovieFound(errorMsg) {
-  mainContainer.innerHTML = `<p style="color: red">${errorMsg}</p>`;
+function noMovieFound() {
+  mainContainer.innerHTML = `<p class="no-media-msg">Unable to find what you’re looking for. Please try another search.</p>`;
 }
 
 async function getMediaDetail(media) {

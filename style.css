@@ -3,7 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Inter, serif;
+  font-family: 'Inter', serif;
   box-sizing: border-box;
 }
 
@@ -146,7 +146,13 @@
   justify-content: flex-end;
 }
 .media-detail__watchlist-btn {
+  width: 16px;
   cursor: pointer;
+}
+
+.media-detail__remove-btn {
+  cursor: pointer;
+  width: 16px;
 }
 
 .media-detail__poster {
@@ -165,11 +171,35 @@
   max-width: 160px;
 }
 
+.add-media-container {
+  display: flex;
+  align-items: center;
+  margin: 1.25em 0;
+}
+
+.add-media-to-watchlist {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 0.875rem;
+  text-align: center;
+  display: inline;
+  margin-left: 0.7em;
+}
+
 /* ------------- util classes -------------*/
 
 .no-link {
   text-decoration: none;
   color: white;
+}
+
+.no-media-msg {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #dfdddd;
+  text-align: center;
+  margin-top: 30%;
 }
 
 /* ------------- media queries -------------*/
