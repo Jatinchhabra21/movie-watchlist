@@ -130,19 +130,20 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  gap: 1em;
 }
 
 .media-detail__sub-header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+  font-size: 0.75rem;
 }
 
 .media-detail__watchlist {
   display: flex;
   align-items: center;
   gap: 0.3em;
-  min-width: 100px;
   justify-content: flex-end;
 }
 .media-detail__watchlist-btn {
@@ -160,7 +161,7 @@
 }
 
 .media-detail__rating {
-  min-width: 50px;
+  min-width: 42px;
 }
 
 .media-detail__run-time {
@@ -169,6 +170,12 @@
 
 .media-detail__genre {
   max-width: 160px;
+}
+
+.media-detail__plot {
+  font-size: 0.875rem;
+  line-height: 1.25em;
+  color: #6b7280;
 }
 
 .add-media-container {
